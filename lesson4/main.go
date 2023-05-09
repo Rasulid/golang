@@ -42,4 +42,6 @@ func main() {
 		fmt.Println("D = " + fmt.Sprint(D))
 	}
 
+	fmt.Scan(&a)
+
 }
