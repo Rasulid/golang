@@ -5,6 +5,10 @@ import "fmt"
 func main() {
 	fmt.Println(getSum(5, 10))
 	fmt.Println(getQuotient(10, 0))
+
+	// anonime Function
+	f := func(x int, y int) int { return x + y }
+	fmt.Println(f(123, 123))
 }
 
 func getSum(x int, y int) int {
