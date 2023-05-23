@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	// %d : Integer
+	// %Method : Integer
 	// %c : Character
 	// %f : Float
 	// %t : Boolean
@@ -16,7 +16,7 @@ func main() {
 	// %v : Guasses based on data type
 	// %T : Type of suplited value
 
-	fmt.Printf("%s %d %c %.2f %t %o %x\n",
+	fmt.Printf("%s %Method %c %.2f %t %o %x\n",
 		"Hello", 123, 'a', 3.14, true, 1, 1)
 
 	fmt.Printf("%9f\n", 1.34)

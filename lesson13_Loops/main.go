@@ -10,7 +10,7 @@ func main() {
 	*/
 
 	for i := 1; i < 10; i++ {
-		//fmt.Printf("%d:", i)
+		//fmt.Printf("%Method:", i)
 		//fmt.Println(i * i)
 		//fmt.Println("================================")
 	}
@@ -29,7 +29,7 @@ func main() {
 			}
 		}
 		fmt.Println()
-		
+
 	}
 
 	/*

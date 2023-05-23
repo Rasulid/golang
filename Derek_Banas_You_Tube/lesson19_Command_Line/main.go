@@ -24,5 +24,5 @@ func main() {
 			max = a
 		}
 	}
-	fmt.Printf("%d is max value\n", max)
+	fmt.Printf("%Method is max value\n", max)
 }

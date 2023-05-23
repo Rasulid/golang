@@ -10,21 +10,21 @@ func main() {
 
 	// Addition
 	result1 := p + q
-	fmt.Printf("Result of p + q = %d", result1)
+	fmt.Printf("Result of p + q = %Method", result1)
 
 	// Subtraction
 	result2 := p - q
-	fmt.Printf("\nResult of p - q = %d", result2)
+	fmt.Printf("\nResult of p - q = %Method", result2)
 
 	// Multiplication
 	result3 := p * q
-	fmt.Printf("\nResult of p * q = %d", result3)
+	fmt.Printf("\nResult of p * q = %Method", result3)
 
 	// Division
 	result4 := p / q
-	fmt.Printf("\nResult of p / q = %d", result4)
+	fmt.Printf("\nResult of p / q = %Method", result4)
 
 	// Modulus
 	result5 := p % q
-	fmt.Printf("\nResult of p %% q = %d", result5)
+	fmt.Printf("\nResult of p %% q = %Method", result5)
 }
