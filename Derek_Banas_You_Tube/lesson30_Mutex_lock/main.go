@@ -1,6 +1,10 @@
 package main
 
-import "sync"
+import (
+	"fmt"
+	"sync"
+	"time"
+)
 
 type Account struct {
 	balance int
@@ -18,12 +22,30 @@ type Account struct {
 	// relation at all.
 }
 
+func main() {
+	var acca Account
+	acca.balance = 100
+	fmt.Println(acca.GetBalance())
+	for i := 0; i < 12; i++ {
+		go acca.Withdraw(10)
+	}
+	time.Sleep(2 * time.Second)
+}
+
 func (a *Account) GetBalance() int {
 	a.lock.Lock()
 	defer a.lock.Unlock()
 	return a.balance
 }
 
-func main() {
-
+func (a *Account) Withdraw(v int) {
+	a.lock.Lock()
+	defer a.lock.Unlock()
+	if v > a.balance {
+		//log.Fatal("Not enough money in account")
+		fmt.Println("Not enough money in account")
+	} else {
+		fmt.Printf("%d: money in account\n    %d: withdraw\n", a.balance, v)
+		a.balance -= v
+	}
 }
