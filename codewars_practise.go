@@ -6,13 +6,15 @@ import (
 )
 
 func main() {
-	fmt.Println(HowManyDalmatians(80))
-	fmt.Println(GetPlanetName(90))
-	fmt.Println(Namevar())
-	var arr = []string{"1:0", "2:0", "3:0", "4:4", "2:2", "3:3", "1:4", "2:3", "2:4", "3:4"}
-	fmt.Println(Points(arr))
-	fmt.Println(Litres(0.82))
-	fmt.Println(Hero(10, 5))
+	//fmt.Println(HowManyDalmatians(80))
+	//fmt.Println(GetPlanetName(90))
+	//fmt.Println(Namevar())
+	//var arr = []string{"1:0", "2:0", "3:0", "4:4", "2:2", "3:3", "1:4", "2:3", "2:4", "3:4"}
+	//fmt.Println(Points(arr))
+	//fmt.Println(Litres(0.82))
+	//fmt.Println(Hero(10, 5))
+	//fmt.Println(ReverseSeq(10))
+	ReverseSeq(10)
 }
 
 func HowManyDalmatians(number int) string {
@@ -96,4 +98,13 @@ func Hero(bullets, dragons int) bool {
 		return false
 	}
 
+}
+
+func ReverseSeq(n int) {
+	var res []int
+	for i := 1; i <= n; i++ {
+		res = append(res, i)
+	}
+
+	fmt.Println(res)
 }
