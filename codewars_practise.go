@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 	"strings"
 )
 
@@ -14,7 +15,9 @@ func main() {
 	//fmt.Println(Litres(0.82))
 	//fmt.Println(Hero(10, 5))
 	//fmt.Println(ReverseSeq(10))
-	ReverseSeq(10)
+	//ReverseSeq(10)
+
+	fmt.Println(Contamination("", ""))
 }
 
 func HowManyDalmatians(number int) string {
@@ -107,4 +110,64 @@ func ReverseSeq(n int) {
 	}
 
 	fmt.Println(res)
+}
+
+func Contamination(text, char string) string {
+
+	var res string
+
+	for i := 0; i < len(text); i++ {
+		res += char
+	}
+
+	return res
+}
+
+func multipleOfIndex(ints []int) []int {
+	var arr []int
+	for i, val := range ints[1:] {
+		if val%(i+1) == 0 {
+			arr = append(arr, val)
+		}
+	}
+	return arr
+}
+
+func BinToDec(bin string) int {
+	// your code here
+	IntNumber, err := strconv.Atoi(bin)
+	if err != nil {
+		panic(err)
+	}
+	return IntNumber
+}
+
+func Between(a, b int) []int {
+	// your code here
+	var res []int
+	for i := a; i <= b; i++ {
+		res = append(res, i)
+	}
+	return res
+}
+
+func SmallestIntegerFinder(nums []int) int {
+
+	min := nums[0]
+
+	for _, num := range nums {
+
+		if num < min {
+
+			min = num
+
+		}
+
+	}
+
+	return min // your code here
+}
+
+func Opposite(value int) int {
+	return value * -1
 }
